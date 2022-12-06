@@ -45,4 +45,41 @@ button.addEventListener('click', function (){
         finalPrice = basePrice - basePrice * 0.4
     }
     console.log(finalPrice)
+
+
+
 });
+
+reset.addEventListener('click', function (){
+    inputText.value = ''
+    inputNumber.value = ''
+    selectElement.value = ''
+});
+
+
+
+/* 
+const targetElement = document.getElementById('target')
+
+ const tripDistance = parseInt(prompt('Quanti chilometri devi percorrere?', 100).trim())
+
+ const userAge = parseInt(prompt('Quanti anni hai?', 18).trim())
+
+ if(isNaN(tripDistance) || isNaN(userAge)){
+     alert('Attenzione! Puoi inserire solo valori numerici.')
+ } else {
+     const basePrice = tripDistance * 0.21
+     console.log(basePrice)
+  
+     let finalPrice = basePrice;
+
+     if(userAge < 18){
+         finalPrice = basePrice - basePrice * 0.2
+     } else if(userAge >= 65){
+         finalPrice = basePrice - basePrice * 0.4
+     }
+     console.log(finalPrice)
+
+     targetElement.innerText = finalPrice.toFixed(2) + '€'
+ }
+*/
