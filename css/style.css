@@ -20,6 +20,12 @@ body{
     border-radius: 20px;
 }
 
+#discount{
+    font-size: 14px;
+    color: gray;
+    text-decoration:line-through;
+}
+
 /* utils */
 
 .container{

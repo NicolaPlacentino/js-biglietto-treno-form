@@ -26,7 +26,6 @@ const inputText = document.getElementById('user-name');
 const inputNumber = document.getElementById('user-trip');
 const selectElement = document.getElementById('user-age'); 
 
-
 const button = document.getElementById('button');
 const reset = document.getElementById('reset');
 
@@ -43,18 +42,43 @@ button.addEventListener('click', function (){
     const userAge = selectElement.value;
     console.log(userName, userAge, tripDistance);
 
-    const basePrice = tripDistance * 0.21
-    let finalPrice = basePrice
+    if (userName === '' || tripDistance === ''){
+        alert('I dati inseriti non sono completi')
+    } else {
+            
+        const basePrice = tripDistance * 0.21;
+        let finalPrice = basePrice;
+        
 
-    if(userAge === 'junior'){
-        finalPrice = basePrice - basePrice * 0.2
-    } else if(userAge === 'senior'){
-        finalPrice = basePrice - basePrice * 0.4
+        let discounted = false;
+
+        if(userAge === 'junior'){
+            finalPrice = basePrice - basePrice * 0.2
+            discounted = true
+
+        } else if(userAge === 'senior'){
+            finalPrice = basePrice - basePrice * 0.4
+            discounted = true
+        }
+        console.log(finalPrice);
+        
+        
+        const random = Math.random();
+        
+        const randomCode = Math.floor(random * (99999 - 10000 + 1)) + 10000;
+        
+        const randomWagon = Math.floor(random * 10) + 1;
+        
+    
+        insertName.innerText = userName;
+        insertTicket.innerText = 'Biglietto ' + userAge;
+        insertWagon.innerText = randomWagon
+        insertCode.innerText = randomCode
+        insertPrice.innerText = '€' + finalPrice.toFixed(2);
+        if(discounted){
+            discount.innerText = '€' + basePrice.toFixed(2)
+        }
     }
-    console.log(finalPrice)
-
-
-
 });
 
 reset.addEventListener('click', function (){
@@ -62,31 +86,3 @@ reset.addEventListener('click', function (){
     inputNumber.value = ''
     selectElement.value = ''
 });
-
-
-
-/* 
-const targetElement = document.getElementById('target')
-
- const tripDistance = parseInt(prompt('Quanti chilometri devi percorrere?', 100).trim())
-
- const userAge = parseInt(prompt('Quanti anni hai?', 18).trim())
-
- if(isNaN(tripDistance) || isNaN(userAge)){
-     alert('Attenzione! Puoi inserire solo valori numerici.')
- } else {
-     const basePrice = tripDistance * 0.21
-     console.log(basePrice)
-  
-     let finalPrice = basePrice;
-
-     if(userAge < 18){
-         finalPrice = basePrice - basePrice * 0.2
-     } else if(userAge >= 65){
-         finalPrice = basePrice - basePrice * 0.4
-     }
-     console.log(finalPrice)
-
-     targetElement.innerText = finalPrice.toFixed(2) + '€'
- }
-*/
