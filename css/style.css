@@ -2,7 +2,7 @@
 
 *{
     margin: 0;
-    padding: 0;
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -10,9 +10,15 @@
 
 body{
     font-family: sans-serif;
+    background-color: lightskyblue;
 }
 
+.container > div{
+    background-color: white;
 
+    margin-bottom:50px;
+    border-radius: 20px;
+}
 
 /* utils */
 
@@ -20,4 +26,38 @@ body{
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
+}
+
+.flex{
+    display: flex;
+}
+
+.jc-center{
+    justify-content: center;
+}
+
+.space-around{
+    justify-content: space-around;
+}
+
+.f-grow{
+    flex-grow: 1;
+}
+
+.d-block{
+    display: block;
+}
+
+.g-5{
+    gap: 25px;
+}
+
+.bg-lightgray{
+    background-color: whitesmoke;
+}
+
+.border-gray{
+    border:1.5px solid gray;
+
+    padding: 0;
 }

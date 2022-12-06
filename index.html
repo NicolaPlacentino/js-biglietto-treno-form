@@ -13,22 +13,58 @@
     <div class="container">
         <h1>Calcola il prezzo del tuo biglietto</h1>
         <div>
-            <label for="user-name">Nome e cognome</label>
-            <input type="text" id="user-name">
-            <label for="user-trip">Km da percorrere</label>
-            <input type="number" min="10" id="user-trip">
-            <label for="user-age">Fascia d'età</label>
-            <select id="user-age">
-                <option value="adult">Adulto</option>
-                <option value="junior">Minorenne</option>
-                <option value="senior">Over 65</option>
-            </select>
+            <div class="flex jc-center">
+                <div class="f-grow">
+                    <label for="user-name" class="d-block">Nome e cognome</label>
+                    <input type="text" id="user-name">
+                </div>
+                <div class="f-grow">
+                    <label for="user-trip" class="d-block">Km da percorrere</label>
+                    <input type="number" min="10" id="user-trip">
+                </div>
+                <div class="f-grow">
+                    <label for="user-age" class="d-block">Fascia d'età</label>
+                    <select id="user-age">
+                        <option value="adult">Adulto</option>
+                        <option value="junior">Minorenne</option>
+                        <option value="senior">Over 65</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex jc-center g-5">
+                <button id="button">
+                    Genera il tuo biglietto 
+                </button>
+                <input type="reset" id="reset"></input>
+            </div>
         </div>
+
         <div>
-            <button id="button">
-                Genera il tuo biglietto 
-            </button>
-            <input type="reset" id="reset"></input>
+            <h2>Il tuo biglietto</h2>
+            <div class="flex border-gray">
+                <div class="bg-lightgray">
+                    <h3>Nome passeggero</h3>
+                    <p id="insert-name"></p>
+                </div>
+                <div class="flex space-around f-grow">
+                    <div>
+                        <h4>Offerta</h4>
+                        <p id="insert-ticket"></p>
+                    </div>
+                    <div>
+                        <h4>Carrozza</h4>
+                        <p id="insert-wagon"></p>
+                    </div>
+                    <div>
+                        <h4>Codice CP</h4>
+                        <p id="insert-code"></p>
+                    </div>
+                    <div>
+                        <h4>Costo biglietto</h4>
+                        <p id="insert-price"><span id="old-price"></span></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

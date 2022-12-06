@@ -30,6 +30,9 @@ const selectElement = document.getElementById('user-age');
 const button = document.getElementById('button');
 const reset = document.getElementById('reset');
 
+const insertName = document.getElementById('insert-name')
+
+
 button.addEventListener('click', function (){
     const userName = inputText.value.trim();
     const tripDistance = inputNumber.value;
@@ -47,7 +50,7 @@ button.addEventListener('click', function (){
     console.log(finalPrice)
 
 
-    
+
 });
 
 reset.addEventListener('click', function (){
