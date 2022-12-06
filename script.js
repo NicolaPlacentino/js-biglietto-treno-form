@@ -17,42 +17,32 @@ finale con il prezzo.
 Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina*/
 
 // 1. Prendere l'elemento nel DOM
-// 2. Chiedere numero di chilometri da percorrere e l'età
+// 2. Prendere i valori degli input quando 'button' viene cliccato
 // 3. Calcolare il prezzo base del biglietto
-// 4. Calcolare il prezzo scontato per minorenni e over 65
-// 5. Stabilire il prezzo giusto a seconda delle condizioni dell'utente
-// 6. Stampare il prezzo finale nel DOM
-
-const inputText = document.getElementById('user-name')
-const inputNumber = document.getElementById('user-trip')
-const selectElement = document.getElementById('user-age') 
-const button = document.getElementById('generate-ticket')
-const reset = document.getElementById('reset')
+// 4. Calcolare il prezzo scontato per minorenni e over 65 se necessario
+// 4b. (Bonus)
+// 5. Stampare il biglietto
+const inputText = document.getElementById('user-name');
+const inputNumber = document.getElementById('user-trip');
+const selectElement = document.getElementById('user-age'); 
 
 
+const button = document.getElementById('button');
+const reset = document.getElementById('reset');
 
-/* 
-//const targetElement = document.getElementById('target')
+button.addEventListener('click', function (){
+    const userName = inputText.value.trim();
+    const tripDistance = inputNumber.value;
+    const userAge = selectElement.value;
+    console.log(userName, userAge, tripDistance);
 
-// const tripDistance = parseInt(prompt('Quanti chilometri devi percorrere?', 100).trim())
+    const basePrice = tripDistance * 0.21
+    let finalPrice = basePrice
 
-// const userAge = parseInt(prompt('Quanti anni hai?', 18).trim())
-
-// if(isNaN(tripDistance) || isNaN(userAge)){
-//     alert('Attenzione! Puoi inserire solo valori numerici.')
-// } else {
-//     const basePrice = tripDistance * 0.21
-//     console.log(basePrice)
-  
-//     let finalPrice = basePrice;
-
-//     if(userAge < 18){
-//         finalPrice = basePrice - basePrice * 0.2
-//     } else if(userAge >= 65){
-//         finalPrice = basePrice - basePrice * 0.4
-//     }
-//     console.log(finalPrice)
-
-//     targetElement.innerText = finalPrice.toFixed(2) + '€'
-// }
-*/
+    if(userAge === 'junior'){
+        finalPrice = basePrice - basePrice * 0.2
+    } else if(userAge === 'senior'){
+        finalPrice = basePrice - basePrice * 0.4
+    }
+    console.log(finalPrice)
+});
