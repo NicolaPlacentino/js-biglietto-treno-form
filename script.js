@@ -23,10 +23,9 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 // 5. Stabilire il prezzo giusto a seconda delle condizioni dell'utente
 // 6. Stampare il prezzo finale nel DOM
 
-
-
-
-
+const inputText = document.getElementById('user-name')
+const inputNumber = document.getElementById('user-trip')
+const selectElement = document.getElementById('user-age') 
 
 
 
