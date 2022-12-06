@@ -26,8 +26,8 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 const inputText = document.getElementById('user-name')
 const inputNumber = document.getElementById('user-trip')
 const selectElement = document.getElementById('user-age') 
-
-
+const button = document.getElementById('generate-ticket')
+const reset = document.getElementById('reset')
 
 
 
