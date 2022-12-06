@@ -47,7 +47,7 @@ button.addEventListener('click', function (){
     console.log(finalPrice)
 
 
-
+    
 });
 
 reset.addEventListener('click', function (){
