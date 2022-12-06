@@ -31,7 +31,11 @@ const button = document.getElementById('button');
 const reset = document.getElementById('reset');
 
 const insertName = document.getElementById('insert-name')
-
+const insertTicket = document.getElementById('insert-ticket')
+const insertWagon = document.getElementById('insert-wagon')
+const insertCode = document.getElementById('insert-code')
+const insertPrice = document.getElementById('insert-price')
+const discount = document.getElementById('discount')
 
 button.addEventListener('click', function (){
     const userName = inputText.value.trim();
